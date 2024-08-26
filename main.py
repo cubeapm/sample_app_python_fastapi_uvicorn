@@ -23,9 +23,9 @@ RedisInstrumentor().instrument()
 # https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation
 
 cnx = mysql.connector.connect(
-    user='root', password='root', host='localhost', database='test')
+    user='root', password='root', host='mysql', database='test')
 
-redis_conn = redis.Redis(host='localhost', port=6379, decode_responses=True)
+redis_conn = redis.Redis(host='redis', port=6379, decode_responses=True)
 
 
 @app.get("/")
