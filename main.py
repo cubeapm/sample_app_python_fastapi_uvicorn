@@ -3,7 +3,24 @@ import mysql.connector
 import redis
 from fastapi import FastAPI
 
+from tracing import init_tracing
+from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
+from opentelemetry.instrumentation.requests import RequestsInstrumentor
+from opentelemetry.instrumentation.mysql import MySQLInstrumentor
+from opentelemetry.instrumentation.redis import RedisInstrumentor
+
+
+
 app = FastAPI()
+
+init_tracing()
+FastAPIInstrumentor.instrument_app(app)
+RequestsInstrumentor().instrument()
+MySQLInstrumentor().instrument()
+RedisInstrumentor().instrument()
+# Additional instrumentation can be enabled by
+# following the docs for respective instrumentations at
+# https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation
 
 cnx = mysql.connector.connect(
     user='root', password='root', host='mysql', database='test')
