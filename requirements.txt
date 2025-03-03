@@ -5,6 +5,8 @@ backoff==2.2.1
 certifi==2025.1.31
 charset-normalizer==3.4.1
 click==8.1.8
+ecs-logging==2.2.0
+elastic-apm==6.23.0
 fastapi==0.115.8
 grpcio==1.70.0
 h11==0.14.0
@@ -27,3 +29,4 @@ uvicorn==0.34.0
 uvloop==0.21.0
 watchfiles==1.0.4
 websockets==14.2
+wrapt==1.17.2
