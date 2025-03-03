@@ -11,7 +11,6 @@ h11==0.14.0
 httptools==0.6.4
 idna==3.10
 mysql-connector-python==9.2.0
-newrelic==10.6.0
 packaging==24.2
 pydantic==2.10.6
 pydantic_core==2.27.2

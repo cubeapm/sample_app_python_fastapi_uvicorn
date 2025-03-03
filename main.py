@@ -1,12 +1,9 @@
 import requests
 import mysql.connector
 import redis
-import newrelic.agent
 from fastapi import FastAPI
 
 app = FastAPI()
-
-newrelic.agent.initialize()
 
 cnx = mysql.connector.connect(
     user='root', password='root', host='mysql', database='test')
