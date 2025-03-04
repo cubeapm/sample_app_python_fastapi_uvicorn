@@ -10,13 +10,15 @@ Refer the project README below for more details.
 
 # Python FastAPI Uvicorn Instrumentation
 
-This is a sample app to demonstrate how to instrument Python FastAPI Uvicorn app with **New Relic** and **OpenTelemetry**. It contains source code for the FastAPI Uvicorn app which interacts with various services like Redis, MySQL, etc. to demonstrate tracing for these services. This repository has a docker compose file to set up all these services conveniently.
+This is a sample app to demonstrate how to instrument Python FastAPI Uvicorn app with **Datadog**, **Elastic**, **New Relic** and **OpenTelemetry**. It contains source code for the FastAPI Uvicorn app which interacts with various services like Redis, MySQL, etc. to demonstrate tracing for these services. This repository has a docker compose file to set up all these services conveniently.
 
 The code is organized into multiple branches. The main branch has the FastAPI Uvicorn app without any instrumentation. Other branches then build upon the main branch to add specific instrumentations as below:
 
 | Branch                                                                                         | Instrumentation | Code changes for instrumentation                                                                                |
 | ---------------------------------------------------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------- |
 | [main](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/tree/main)         | None            | -                                                                                                               |
+| [datadog](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/tree/datadog) | Datadog       | [main...datadog](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/compare/main...datadog) |
+| [elastic](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/tree/elastic)         | Elastic   | [main...elastic](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/compare/main...elastic)         |
 | [newrelic](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/tree/newrelic) | New Relic       | [main...newrelic](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/compare/main...newrelic) |
 | [otel](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/tree/otel)         | OpenTelemetry   | [main...otel](https://github.com/cubeapm/sample_app_python_fastapi_uvicorn/compare/main...otel)         |
 
