@@ -8,7 +8,7 @@ from elasticapm.contrib.starlette import ElasticAPM
 app = FastAPI()
 app.add_middleware(ElasticAPM)
 
-# If using ELASTIC_APM_LOG_FILE to check agent debug logs, 
+# If using ELASTIC_APM_LOG_LEVEL to check agent debug logs, 
 # The following may need to be uncommented to see the logs.
 
 # logging.basicConfig()
